@@ -1,0 +1,123 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Practica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var cuadrado = new Cuadrado(3);
+            cuadrado.Dibujar();
+            Console.WriteLine(" VOLUMEN DEL CUADRADO ES {0}",cuadrado.Area());
+
+            Console.WriteLine("\n");
+
+            var circulo = new Circulo(5);
+            circulo.Dibujar();
+            Console.WriteLine(" AREA DEL CIRCULO ES {0}", circulo.Area());
+
+            Console.WriteLine("\n");
+
+            var triangulo = new Triangulo(2);
+            triangulo.Dibujar();
+            Console.WriteLine("VOLUMEN DEL TRIANGULO  ES {0}", triangulo.Area());
+
+            Console.ReadLine();
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Practica4
+{
+   public class Circulo : Figura
+    {
+       private double _radio;
+
+       public Circulo(double radio) 
+       {
+           this._radio = radio;
+ 
+       }
+
+     
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Practica
+{
+    public class Cuadrado : Figura
+    {
+        private double _lado;
+
+        public Cuadrado(double lado)
+        {
+            this._lado = lado;
+        }
+
+        public override void Dibujar()
+        {
+            Console.WriteLine("CUADRADO");
+
+        }
+
+        public override double Area()
+        {
+            return Math.Pow(this._lado, 3);
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Practica4
+{
+    public  class Triangulo : Figura
+    {
+        private  _vol;
+
+        public Triangulo(vol) 
+        {
+            this._vol = vol;
+
+        }
+
+        public override  Dibujar()
+        {
+            Console.WriteLine("TRIANGULO");
+        }
+
+        public override double Area()
+        {
+            return Math.Pow(this._vol, 3);
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Practica
+{
+    public abstract class Figura
+    {
+        public abstract void Dibujar();
+        public abstract double Area();
+    }
+}
+
+
+
+
